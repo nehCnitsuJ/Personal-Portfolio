@@ -34,29 +34,6 @@
   --scroll-thumb-hover-color: #454f6b;
 }
 
-.dark-theme {
-  /*=======Main theme colors=======*/
-  --first-color: #fff;
-  --second-color: #6a59d1;
-  --third-color: #a9afc3;
-
-  /*=======Background colors=======*/
-  --body-bg-color: #0e1b31;
-  --card-bg-color: #132347;
-  --modal-bg-color: #102048;
-  --bg-transparent-color: rgba(255, 255, 255, 0.1);
-  --transparent-color-01: rgba(255, 255, 255, 0.1);
-  --line-color: #454f6b;
-
-  /*=======Color Filter=======*/
-  --color-filter: invert(0);
-
-  /*=======Scroll bar colors=======*/
-  --scroll-bar-color: #c1ceff;
-  --scroll-thumb-color: #282f4e;
-  --scroll-thumb-hover-color: #454f6b;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +60,16 @@ li {
   list-style: none;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+
 /*=======Scroll to top button=======*/
 .scrollToTop-btn {
   z-index: 99999;
@@ -104,31 +91,6 @@ li {
   right: 20px;
   pointer-events: all;
   opacity: 1;
-}
-
-/*=======Light/Dark theme button=======*/
-.theme-btn {
-  z-index: 999999;
-  position: fixed;
-  right: 0;
-  top: 100px;
-  background: var(--transparent-color-01);
-  backdrop-filter: blur(20px);
-  width: 50px;
-  height: 50px;
-  font-size: 1.2em;
-  border-radius: 5px 0 0 5px;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-}
-
-.theme-btn .fa-sun,
-.theme-btn.sun .fa-moon {
-  display: none;
-}
-
-.theme-btn.sun .fa-sun {
-  display: block;
 }
 
 /*=======Scroll bar=======*/
@@ -205,4 +167,61 @@ header.sticky .nav-bar {
 
 .nav-menu-btn {
   display: none;
+}
+
+/*=======Blog Contents=======*/
+.container {
+  width: 96%;
+  max-width: 117rem;
+  margin: 0 auto;
+}
+.container img {
+  max-width: 114rem;
+  height: 40rem;
+  background: no-repeat center / cover;
+  margin: 5rem auto;
+}
+
+main {
+  width: 100%;
+  max-width: 80rem;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  margin-top: -6rem;
+}
+
+main h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+main .blog-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+main .content p {
+  margin: 1rem 0;
+}
+
+main .content h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1020px) {
+  .mobile {
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+  }
+  .container {
+    display: none;
+  }
 }
