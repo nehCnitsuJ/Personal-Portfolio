@@ -169,6 +169,12 @@ header.sticky .nav-bar {
   display: none;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*=======Blog Contents=======*/
 .container {
   width: 96%;
@@ -212,6 +218,52 @@ main .content p {
 main .content h4 {
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+.blog-imgs {
+  flex-direction: column;
+}
+
+.blog-imgs .content {
+  width: 100%;
+}
+
+.client-swiper .swiper-wrapper {
+  margin-bottom: 30px;
+}
+
+.client-swiper .swiper-slide {
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.client-img {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.client-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--second-color);
+  font-size: 3em;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: var(--second-color);
 }
 
 @media screen and (max-width: 1020px) {
